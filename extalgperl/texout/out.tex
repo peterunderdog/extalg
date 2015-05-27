@@ -1,0 +1,606 @@
+\input amstex
+\newdimen\vk
+\newdimen\hk
+\newdimen\vs
+\newdimen\hs
+\vs=7pt
+\hs=5pt
+\vk=0pt
+\hk=0pt
+\catcode`<=\active
+\catcode`>=\active
+\catcode`^=\active
+\catcode`~=\active
+\catcode`:=\active
+\catcode`!=\active
+\catcode`;=\active
+\def\put#1{\offinterlineskip\vbox to0pt{\kern-\vk
+     \hbox to 0pt{\kern\hk$\scriptstyle#1$\hss}\vss}}
+\def>#1{\advance\vk by -\vs\put#1}
+\def<#1{\advance\vk by \vs\put#1}
+\def^#1{\advance\hk by0.5\hs\advance\vk by\vs\put#1}
+\def~#1{\advance\hk by0.75\hs\advance\vk by-\vs\put#1}
+\def:#1{\hskip3pt\hk=0pt\vk=0pt\put#1}
+\def;{\advance\hk by 8pt\hskip\hk}
+\def!#1{\hskip3pt\hk=\hs\vk=0pt\put#1\hk=0pt}
+\def\gldim{\operatorname{gldim\,}}
+\def\ne{\hidewidth\mathop{\nearrow}\hidewidth}
+\def\se{\hidewidth\mathop{\searrow}\hidewidth}
+\def\dn{\hidewidth\mathop{\downarrow}\hidewidth}
+\def\up{\hidewidth\mathop{\uparrow}\hidewidth}
+\def\rarr{\hidewidth\mathop{\rightarrow}\hidewidth}
+\nopagenumbers
+{ex/1.1}
+\bigskip
+7 not in a cone
+
+
+
+$C(7)$
+
+%get_cone(inj{7}):
+$$\matrix
+&&&&&&&&&&&&\raise0\vs\hbox{$\bigl|$:5>4>3;$\bigr|$}&&&&&&&&&&&&\cr
+&&&&&&&&&&&\ne&&\se&&&&&&&&&&&&&\cr
+&&\raise0.5\vs\hbox{$\bigl|$:3>1;}&&&&S_2&&&&\raise0.5\vs\hbox{:4>3;}&&&&\raise0.5\vs\hbox{:5>4;}&&&&S_6&&&&\raise0.5\vs\hbox{:7>5;$\bigr|$}&&\cr
+&\ne&&\se&&\ne&&\se&&\ne&&\se&&\ne&&\se&&\ne&&\se&&\ne&&\se&&&\cr
+S_1&&&&\raise0\vs\hbox{:3~1^2;}&&&&\raise0\vs\hbox{:2^4~3;}&&&&S_4&&&&\raise0\vs\hbox{:5~4^6;}&&&&\raise0\vs\hbox{:6^7~5;}&&&&S_7\cr
+&\se&&\ne&&\se&&\ne&&\se&&\ne&&\se&&\ne&&\se&&\ne&&\se&&\ne&&&\cr
+&&\raise0.5\vs\hbox{$\bigl|$:2>1;}&&&&S_3&&&&\raise0.5\vs\hbox{:2<4;}&&&&\raise0.5\vs\hbox{:6>4;}&&&&S_5&&&&\raise0.5\vs\hbox{:6<7;$\bigr|$}&&\cr
+&&&&&&&&&&&\se&&\ne&&&&&&&&&&&&&\cr
+&&&&&&&&&&&&\raise0\vs\hbox{$\bigl|$:6>4>2;$\bigr|$}&&&&&&&&&&&&\cr
+&&&&&&&&&&&&&&&&&&&&&&&&&&\cr
+\endmatrix$$
+5 in a cone
+
+6 in a cone
+
+2 in a cone
+
+3 in a cone
+
+\vfil\eject
+{ex/1.2}
+\bigskip
+1 not in a cone
+
+
+
+$C(1)$
+
+%get_cone(inj{1}):
+$$\matrix
+&&&&&&\raise0\vs\hbox{$\bigl|$:2>5>7;$\bigr|$}&&&&&&&&&&&&&&&&\cr
+&&&&&\ne&&\se&&&&&&&&&&&&&&&&&\cr
+S_6&&&&\raise0.5\vs\hbox{:7<5;}&&&&\raise0.5\vs\hbox{:2>5;}&&&&S_4&&&&S_3&&&&\raise0.5\vs\hbox{:1>2;$\bigr|$}&&\cr
+&\se&&\ne&&\se&&\ne&&\se&&\ne&&\se&&\ne&&\se&&\ne&&\se&&&\cr
+&&\raise0\vs\hbox{$\bigl|$:7^5~6;}&&&&S_5&&&&\raise0\vs\hbox{:2~5^4;}&&&&\raise0.5\vs\hbox{:4<3;}&&&&\raise0\vs\hbox{:3^1~2;}&&&&S_1\cr
+&\ne&&\se&&\ne&&\se&&\ne&&\se&&\ne&&\se&&\ne&&\se&&\ne&&&\cr
+S_7&&&&\raise0.5\vs\hbox{:6<5;}&&&&\raise0.5\vs\hbox{:5<4;}&&&&\raise-0.5\vs\hbox{:2~5^4<3;}&&&&\raise-0.5\vs\hbox{:4<3^1~2;}&&&&\raise0.5\vs\hbox{:3<1;$\bigr|$}&&\cr
+&&&&&\se&&\ne&&\se&&\ne&&\se&&\ne&&\se&&\ne&&&&&\cr
+&&&&&&\raise0\vs\hbox{$\bigl|$:6<5<4;}&&&&\raise0\vs\hbox{:3>4>5;}&&&&S_2&&&&\raise0\vs\hbox{:4<3<1;$\bigr|$}&&&&\cr
+&&&&&&&\se&&\ne&&&&&&&&&&&&&&&\cr
+&&&&&&&&\raise-0.5\vs\hbox{$\bigl|$:3>4>5>6;$\bigr|$}&&&&&&&&&&&&&&\cr
+&&&&&&&&&&&&&&&&&&&&&&&&\cr
+\endmatrix$$
+2 in a cone
+
+3 in a cone
+
+4 in a cone
+
+7 in a cone
+
+6 in a cone
+
+\vfil\eject
+{ex/a}
+\bigskip
+1 not in a cone
+
+
+
+$C(1)$
+
+%get_cone(inj{1}):
+$$\matrix
+S_6&&&&\raise0.5\vs\hbox{:5<9;$\bigr|$}&&&&&&&&&&\cr
+&\se&&\ne&&\se&&&&&&&&&&&\cr
+&&\raise0\vs\hbox{:6^9~5;}&&&&S_9&&&&\raise0\vs\hbox{:1>a>7;$\bigr|$}&&&&\cr
+&&&\se&&\ne&&\se&&\ne&&\se&&&&&\cr
+&&&&\raise0.5\vs\hbox{:6<9;}&&&&\raise-0.5\vs\hbox{:9^1~a>7;}&&&&\raise0.5\vs\hbox{:1>a;$\bigr|$}&&\cr
+&&&&&\se&&\ne&&\se&&\ne&&\se&&&\cr
+&&&&&&\raise-1\vs\hbox{$\bigl|$:6<9^1~a>7;}&&&&\raise0\vs\hbox{:9^1~a;}&&&&S_1\cr
+&&&&&\ne&&\se&&\ne&&\se&&\ne&&&\cr
+&&&&\raise0.5\vs\hbox{:a>7;}&&&&\raise-0.5\vs\hbox{:6<9^1~a;}&&&&\raise0.5\vs\hbox{:9<1;$\bigr|$}&&\cr
+&&&\ne&&\se&&\ne&&\se&&\ne&&&&&\cr
+&&\raise0\vs\hbox{:8^a~7;}&&&&S_a&&&&\raise0\vs\hbox{:6<9<1;$\bigr|$}&&&&\cr
+&\ne&&\se&&\ne&&&&&&&&&&&\cr
+S_7&&&&\raise0.5\vs\hbox{:8<a;$\bigr|$}&&&&&&&&&&\cr
+&&&&&&&&&&&&&&&&\cr
+\endmatrix$$
+8 in a cone
+
+9 in a cone
+
+a in a cone
+
+5 in a cone
+
+6 in a cone
+
+7 in a cone
+
+2 not in a cone
+
+
+
+$C(2)$
+
+%get_cone(inj{2}):
+$$\matrix
+&&&&\raise0\vs\hbox{$\bigl|$:7>4>2;}&&&&\cr
+&&&\ne&&\se&&&&&\cr
+&&\raise0.5\vs\hbox{$\bigl|$:4>2;}&&&&\raise-0.5\vs\hbox{:7>4~2^3;}&&\cr
+&\ne&&\se&&\ne&&\se&&&\cr
+S_2&&&&\raise0\vs\hbox{:4~2^3;}&&&&\raise-1\vs\hbox{:7>4~2^3<6;}\cr
+&\se&&\ne&&\se&&\ne&&&\cr
+&&\raise0.5\vs\hbox{$\bigl|$:3>2;}&&&&\raise-0.5\vs\hbox{:6>3~2^4;}&&\cr
+&&&\se&&\ne&&&&&\cr
+&&&&\raise0\vs\hbox{$\bigl|$:6>3>2;}&&&&\cr
+&&&&&&&&&&\cr
+\endmatrix$$
+\vfil\eject
+{ex/b}
+\bigskip
+4 not in a cone
+
+
+
+$C(4)$
+
+%get_cone(inj{4}):
+$$\matrix
+&&&&&&&&&&&&&&&&&&&&&&&&&&S_4&&&&&&\cr
+&&&&&&&&&&&&&&&&&&&&&&&&&\ne&&\se&&&&&&&\cr
+&&&&&&&&&&&&S_4&&&&\raise0\vs\hbox{:2<1<3;$\bigr|$}&&&&\raise0\vs\hbox{$\bigl|$:2>3>1;$\bigr|$}&&&&\raise0\vs\hbox{$\bigl|$:1>2>3;$\bigr|$}&&&&\raise-0.5\vs\hbox{$\bigl|$:4^3~1>2;}&&&&\cr
+&&&&&&&&&&&&&\se&&\ne&&\se&&\ne&&\se&&\ne&&\se&&\ne&&\se&&&&&\cr
+&&&&&&&&&&&&&&\raise-0.5\vs\hbox{$\bigl|$:2<1^3~4;}&&&&\raise0.5\vs\hbox{:1<3;}&&&&\raise0.5\vs\hbox{:2>3;}&&&&\raise0.5\vs\hbox{:1>2;}&&&&\raise0\vs\hbox{:4^3~1;}&&\cr
+&&&&&&&&&&&&&\ne&&\se&&\ne&&\se&&\ne&&\se&&\ne&&\se&&\ne&&\se&&&\cr
+\raise-0.5\vs\hbox{$\bigl|$:2<1^3~4;}&&&&\raise0.5\vs\hbox{:1<3;}&&&&\raise0.5\vs\hbox{:3<2;}&&&&\raise0.5\vs\hbox{:2<1;}&&&&\raise0\vs\hbox{:1^3~4;}&&&&S_3&&&&S_2&&&&S_1&&&&\raise0.5\vs\hbox{:4<3;$\bigr|$}\cr
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&\cr
+\endmatrix$$
+1 in a cone
+
+2 in a cone
+
+3 in a cone
+
+\vfil\eject
+{ex/c}
+\bigskip
+5 not in a cone
+
+
+
+$C(5)$
+
+%get_cone(inj{5}):
+$$\matrix
+&&&&&&&&&&&&\raise-0.5\vs\hbox{$\bigl|$:5>4>1>6;$\bigr|$}&&&&&&&&&&\cr
+&&&&&&&&&&&\ne&&\se&&&&&&&&&&&\cr
+&&&&&&&&&&\raise0\vs\hbox{$\bigl|$:4>1>6;}&&&&\raise0\vs\hbox{:5>4>1;}&&&&&&&&\cr
+&&&&&&&&&\ne&&\se&&\ne&&\se&&&&&&&&&\cr
+S_3&&&&S_2&&&&\raise0.5\vs\hbox{:6<1;}&&&&\raise0.5\vs\hbox{:4>1;}&&&&\raise-1\vs\hbox{:5>4~1^7~9;}&&&&&&\cr
+&\se&&\ne&&\se&&\ne&&\se&&\ne&&\se&&\ne&&\se&&&&&&&\cr
+&&\raise0.5\vs\hbox{$\bigl|$:3<2;}&&&&\raise0\vs\hbox{:6^1~2;}&&&&S_1&&&&\raise-0.5\vs\hbox{:4~1^7~9;}&&&&\raise-0.5\vs\hbox{:5>4~1^7;}&&&&\cr
+&&&\se&&\ne&&\se&&\ne&&\se&&\ne&&\se&&\ne&&\se&&&&&\cr
+&&&&\raise-0.5\vs\hbox{$\bigl|$:6^1~2>3;}&&&&\raise0.5\vs\hbox{:1>2;}&&&&\raise0\vs\hbox{:9^7~1;}&&&&\raise0\vs\hbox{:4~1^7;}&&&&\raise0.5\vs\hbox{:5>4;$\bigr|$}&&\cr
+&&&\ne&&\se&&\ne&&\se&&\ne&&\se&&\ne&&\se&&\ne&&\se&&&\cr
+&&S_6&&&&\raise0\vs\hbox{:3<2<1;}&&&&\raise-0.5\vs\hbox{:9^7~1>2;}&&&&\raise0.5\vs\hbox{:7>1;}&&&&S_4&&&&S_5\cr
+&&&&&&&&&&&&&&&&&&&&&&&&\cr
+\endmatrix$$
+8 not in a cone
+
+
+
+$C(8)$
+
+%get_cone(inj{8}):
+$$\matrix
+&&&&&&&&&&&&\raise-0.5\vs\hbox{$\bigl|$:5>4>1>6;$\bigr|$}&&&&&&&&\raise0\vs\hbox{$\bigl|$:8>7>9;$\bigr|$}&&&&\cr
+&&&&&&&&&&&\ne&&\se&&&&&&\ne&&\se&&&&&\cr
+&&&&&&&&&&\raise0\vs\hbox{$\bigl|$:6<1<4;}&&&&\raise0\vs\hbox{:5>4>1;}&&&&\raise0.5\vs\hbox{:7>9;}&&&&\raise0.5\vs\hbox{:8>7;$\bigr|$}&&\cr
+&&&&&&&&&\ne&&\se&&\ne&&\se&&\ne&&\se&&\ne&&\se&&&\cr
+S_3&&&&S_2&&&&\raise0.5\vs\hbox{:6<1;}&&&&\raise0.5\vs\hbox{:1<4;}&&&&\raise-1\vs\hbox{:9^7~1^4<5;}&&&&S_7&&&&S_8\cr
+&&&&&&&&&&&&&&&&&&&&&&&&&&\cr
+\endmatrix$$
+4 in a cone
+
+7 in a cone
+
+2 not in a cone
+
+
+
+$C(2)$
+
+%get_cone(inj{2}):
+$$\matrix
+S_3&&&&S_2&&&&&&&&\cr
+&\se&&\ne&&\se&&&&&&&&&\cr
+&&\raise0.5\vs\hbox{$\bigl|$:3<2;}&&&&\raise0\vs\hbox{:2^1~6;}&&&&&&\cr
+&&&\se&&\ne&&\se&&&&&&&\cr
+&&&&\raise-0.5\vs\hbox{$\bigl|$:3<2^1~6;}&&&&\raise0.5\vs\hbox{:2<1;}&&&&\cr
+&&&&&\se&&\ne&&\se&&&&&\cr
+&&&&&&\raise0\vs\hbox{:3<2<1;}&&&&\raise-0.5\vs\hbox{:2<1^7~9;}&&\cr
+&&&&&&&\se&&\ne&&\se&&&\cr
+&&&&&&&&\raise-1\vs\hbox{$\bigl|$:3<2<1^7~9;}&&&&\raise0\vs\hbox{:2<1<7;$\bigr|$}\cr
+&&&&&&&\ne&&\se&&\ne&&&\cr
+&&&&&&S_9&&&&\raise-0.5\vs\hbox{:3<2<1<7;$\bigr|$}&&\cr
+&&&&&&&&&&&&&&\cr
+\endmatrix$$
+9 in a cone
+
+1 in a cone
+
+3 in a cone
+
+6 in a cone
+
+\vfil\eject
+{ex/d}
+\bigskip
+4 not in a cone
+
+
+
+$C(4)$
+
+%get_cone(inj{4}):
+$$\matrix
+S_4&&&&&&&&\cr
+&\se&&&&&&&&&\cr
+&&\raise-0.5\vs\hbox{:4^3~1>2;}&&&&&&\cr
+&&&\se&&&&&&&\cr
+&&&&\raise0\vs\hbox{:4^3~1;}&&&&\cr
+&&&&&\se&&&&&\cr
+&&&&&&\raise0.5\vs\hbox{:4<3;}&&\cr
+&&&&&&&\se&&&\cr
+&&&&&&&&\raise0\vs\hbox{$\bigl|$:4<3<4;$\bigr|$}\cr
+&&&&&&&&&&\cr
+\endmatrix$$
+1 not in a cone
+
+
+
+$C(1)$
+
+%get_cone(inj{1}):
+$$\matrix
+\raise-0.5\vs\hbox{$\bigl|$:2<1<3<2;$\bigr|$}&&&&\cr
+&\se&&&&&\cr
+&&\raise0\vs\hbox{:1<3<2;}&&\cr
+&&&\se&&&\cr
+&&&&\raise-0.5\vs\hbox{$\bigl|$:1<3<2<1;$\bigr|$}\cr
+&&&&&&\cr
+\endmatrix$$
+2 in a cone
+
+\vfil\eject
+{ex/e}
+\bigskip
+1 not in a cone
+
+
+
+$C(1)$
+
+%get_cone(inj{1}):
+$$\matrix
+\raise0.5\vs\hbox{$\bigl|$:3>4;}&&&&&&&&&&\cr
+&\se&&&&&&&&&&&\cr
+&&\raise0\vs\hbox{:3~4^2;}&&&&&&&&\cr
+&&&\se&&&&&&&&&\cr
+&&&&S_3&&&&\raise0.5\vs\hbox{:1>2;$\bigr|$}&&\cr
+&&&&&\se&&\ne&&\se&&&\cr
+&&&&&&\raise0\vs\hbox{$\bigl|$:3^1~2;}&&&&S_1\cr
+&&&&&\ne&&\se&&\ne&&&\cr
+&&&&S_2&&&&\raise0.5\vs\hbox{:3<1;$\bigr|$}&&\cr
+&&&\ne&&&&&&&&&\cr
+&&\raise0\vs\hbox{:2~4^3;}&&&&&&&&\cr
+&\ne&&&&&&&&&&&\cr
+\raise0.5\vs\hbox{$\bigl|$:2>4;}&&&&&&&&&&\cr
+&&&&&&&&&&&&\cr
+\endmatrix$$
+2 in a cone
+
+3 in a cone
+
+4 in a cone
+
+\vfil\eject
+{ex/f}
+\bigskip
+1 not in a cone
+
+
+
+$C(1)$
+
+%get_cone(inj{1}):
+$$\matrix
+&&&&&&\raise-0.5\vs\hbox{$\bigl|$:1>2>3>4;$\bigr|$}&&&&&&\cr
+&&&&&\ne&&\se&&&&&&&\cr
+&&&&\raise0\vs\hbox{$\bigl|$:2>3>4;}&&&&\raise0\vs\hbox{:1>2>3;$\bigr|$}&&&&\cr
+&&&\ne&&\se&&\ne&&\se&&&&&\cr
+&&\raise0.5\vs\hbox{$\bigl|$:3>4;}&&&&\raise0.5\vs\hbox{:2>3;}&&&&\raise0.5\vs\hbox{:1>2;$\bigr|$}&&\cr
+&\ne&&\se&&\ne&&\se&&\ne&&\se&&&\cr
+S_4&&&&S_3&&&&S_2&&&&S_1\cr
+&&&&&&&&&&&&&&\cr
+\endmatrix$$
+2 in a cone
+
+3 in a cone
+
+4 in a cone
+
+\vfil\eject
+{ex/g}
+\bigskip
+1 not in a cone
+
+
+
+$C(1)$
+
+%get_cone(inj{1}):
+$$\matrix
+\raise-0.5\vs\hbox{$\bigl|$:2<1<4<3;$\bigr|$}&&&&\cr
+&\se&&&&&\cr
+&&\raise0\vs\hbox{:1<4<3;}&&\cr
+&&&\se&&&\cr
+&&&&\raise-0.5\vs\hbox{$\bigl|$:1<4<3<2;$\bigr|$}\cr
+&&&&&&\cr
+\endmatrix$$
+2 in a cone
+
+3 not in a cone
+
+
+
+$C(3)$
+
+%get_cone(inj{3}):
+$$\matrix
+\raise-0.5\vs\hbox{$\bigl|$:4<3<2<1;$\bigr|$}&&&&\cr
+&\se&&&&&\cr
+&&\raise0\vs\hbox{:3<2<1;}&&\cr
+&&&\se&&&\cr
+&&&&\raise-0.5\vs\hbox{$\bigl|$:3<2<1<4;$\bigr|$}\cr
+&&&&&&\cr
+\endmatrix$$
+4 in a cone
+
+\vfil\eject
+{ex/h}
+\bigskip
+1 not in a cone
+
+
+
+$C(1)$
+
+%get_cone(inj{1}):
+$$\matrix
+&&&&\raise0\vs\hbox{$\bigl|$:1>2>3;$\bigr|$}&&&&\cr
+&&&\ne&&\se&&&&&\cr
+&&\raise0.5\vs\hbox{$\bigl|$:2>3;}&&&&\raise0.5\vs\hbox{:1>2;$\bigr|$}&&\cr
+&\ne&&\se&&\ne&&\se&&&\cr
+S_3&&&&S_2&&&&S_1\cr
+&&&&&&&&&&\cr
+\endmatrix$$
+2 in a cone
+
+3 in a cone
+
+\vfil\eject
+{ex/i}
+\bigskip
+1 not in a cone
+
+
+
+$C(1)$
+
+%get_cone(inj{1}):
+$$\matrix
+S_1\cr
+&&\cr
+\endmatrix$$
+\vfil\eject
+{ex/j}
+\bigskip
+1 not in a cone
+
+
+
+$C(1)$
+
+%get_cone(inj{1}):
+$$\matrix
+&&\raise0.5\vs\hbox{$\bigl|$:1>2;$\bigr|$}&&\cr
+&\ne&&\se&&&\cr
+S_2&&&&S_1\cr
+&&&&&&\cr
+\endmatrix$$
+2 in a cone
+
+\vfil\eject
+{ex/p}
+\bigskip
+1 not in a cone
+
+
+
+$C(1)$
+
+%get_cone(inj{1}):
+$$\matrix
+S_1&&&&&&\cr
+&\se&&&&&&&\cr
+&&\raise0\vs\hbox{:1^2~3;}&&&&\cr
+&&&\se&&&&&\cr
+&&&&\raise0.5\vs\hbox{:1<2;}&&\cr
+&&&&&\se&&&\cr
+&&&&&&\raise0\vs\hbox{$\bigl|$:1<2<1;$\bigr|$}\cr
+&&&&&&&&\cr
+\endmatrix$$
+3 not in a cone
+
+
+
+$C(3)$
+
+%get_cone(inj{3}):
+$$\matrix
+S_3&&&&&&\cr
+&\se&&&&&&&\cr
+&&\raise0\vs\hbox{:3^2~1;}&&&&\cr
+&&&\se&&&&&\cr
+&&&&\raise0.5\vs\hbox{:3<2;}&&\cr
+&&&&&\se&&&\cr
+&&&&&&\raise0\vs\hbox{$\bigl|$:3<2<3;$\bigr|$}\cr
+&&&&&&&&\cr
+\raise-1\vs\hbox{$\bigl|$!2<1^2~3;}&&&&&&\cr
+&&&&&&&&\cr
+\endmatrix$$
+\vfil\eject
+{ex/q}
+\bigskip
+1 not in a cone
+
+
+
+$C(1)$
+
+%get_cone(inj{1}):
+$$\matrix
+&&&&\raise0\vs\hbox{$\bigl|$:2>4>5;}&&&&S_3&&&&\raise0\vs\hbox{:1>2>4;$\bigr|$}&&&&\cr
+&&&\ne&&\se&&\ne&&\se&&\ne&&\se&&&&&\cr
+&&\raise0.5\vs\hbox{$\bigl|$:4>5;}&&&&\raise-0.5\vs\hbox{:2>4~5^3;}&&&&\raise-0.5\vs\hbox{:3^1~2>4;}&&&&\raise0.5\vs\hbox{:1>2;$\bigr|$}&&\cr
+&\ne&&\se&&\ne&&\se&&\ne&&\se&&\ne&&\se&&&\cr
+S_5&&&&\raise0\vs\hbox{:4~5^3;}&&&&\raise0.5\vs\hbox{:2>4;}&&&&\raise0\vs\hbox{:3^1~2;}&&&&S_1\cr
+&\se&&\ne&&\se&&\ne&&\se&&\ne&&\se&&\ne&&&\cr
+&&\raise0.5\vs\hbox{$\bigl|$:3>5;}&&&&S_4&&&&S_2&&&&\raise0.5\vs\hbox{:3<1;$\bigr|$}&&\cr
+&&&&&&&&&&&&&&&&&&\cr
+\endmatrix$$
+2 in a cone
+
+3 in a cone
+
+4 in a cone
+
+\vfil\eject
+{ex/r}
+\bigskip
+1 not in a cone
+
+
+
+$C(1)$
+
+%get_cone(inj{1}):
+$$\matrix
+&&&&&&&&&&\raise0.5\vs\hbox{$\bigl|$:1>3;}&&&&&&\cr
+&&&&&&&&&\ne&&\se&&&&&&&\cr
+S_6&&&&\raise0.5\vs\hbox{:4>5;}&&&&S_3&&&&\raise-0.5\vs\hbox{:1~3^2~4;}&&&&\cr
+&\se&&\ne&&\se&&\ne&&\se&&\ne&&\se&&&&&\cr
+&&\raise0\vs\hbox{$\bigl|$:6^4~5;}&&&&\raise0\vs\hbox{:3~5^4;}&&&&\raise0\vs\hbox{:4^2~3;}&&&&\raise0\vs\hbox{:1~3^2;}&&\cr
+&\ne&&\se&&\ne&&\se&&\ne&&\se&&\ne&&\se&&&\cr
+S_5&&&&\raise-0.5\vs\hbox{:6^4~5^3;}&&&&S_4&&&&\raise0.5\vs\hbox{:2>3;}&&&&S_1\cr
+&&&&&&&&&&&&&&&&&&\cr
+\endmatrix$$
+2 not in a cone
+
+
+
+$C(2)$
+
+%get_cone(inj{2}):
+$$\matrix
+&&\raise0.5\vs\hbox{$\bigl|$:3>5;}&&&&\raise0.5\vs\hbox{:6<4;$\bigr|$}&&&&&&&&&&\cr
+&\ne&&\se&&\ne&&\se&&&&&&&&&&&\cr
+S_5&&&&\raise-0.5\vs\hbox{:3~5^4~6;}&&&&S_4&&&&\raise0.5\vs\hbox{:2>3;}&&&&\cr
+&\se&&\ne&&\se&&\ne&&\se&&\ne&&\se&&&&&\cr
+&&\raise0\vs\hbox{$\bigl|$:6^4~5;}&&&&\raise0\vs\hbox{:3~5^4;}&&&&\raise0\vs\hbox{:4^2~3;}&&&&\raise0\vs\hbox{:2~3^1;}&&\cr
+&\ne&&\se&&\ne&&\se&&\ne&&\se&&\ne&&\se&&&\cr
+S_6&&&&\raise0.5\vs\hbox{:4>5;}&&&&S_3&&&&\raise-0.5\vs\hbox{:4^2~3^1;}&&&&S_2\cr
+&&&&&&&&&\se&&\ne&&\se&&\ne&&&\cr
+&&&&&&&&\raise-1\vs\hbox{$\bigl|$!5<3^2~4;}&\rarr&\raise0.5\vs\hbox{$\bigl|$:1>3;}&&&&\raise0.5\vs\hbox{:4<2;$\bigr|$}&&\cr
+&&&&&&&&&&&&&&&&&&\cr
+\endmatrix$$
+4 in a cone
+
+6 in a cone
+
+3 in a cone
+
+\vfil\eject
+{ex/z}
+\bigskip
+a not in a cone
+
+
+
+$C(a)$
+
+%get_cone(inj{a}):
+$$\matrix
+S_5&&&&\raise0.5\vs\hbox{:4<8;$\bigr|$}&&&&&&&&&&\cr
+&\se&&\ne&&\se&&&&&&&&&&&\cr
+&&\raise0\vs\hbox{:5^8~4;}&&&&S_8&&&&\raise0\vs\hbox{:a>9>6;$\bigr|$}&&&&\cr
+&&&\se&&\ne&&\se&&\ne&&\se&&&&&\cr
+&&&&\raise0.5\vs\hbox{:5<8;}&&&&\raise-0.5\vs\hbox{:8^a~9>6;}&&&&\raise0.5\vs\hbox{:a>9;$\bigr|$}&&\cr
+&&&&&\se&&\ne&&\se&&\ne&&\se&&&\cr
+&&&&&&\raise-1\vs\hbox{$\bigl|$:5<8^a~9>6;}&&&&\raise0\vs\hbox{:8^a~9;}&&&&S_a\cr
+&&&&&\ne&&\se&&\ne&&\se&&\ne&&&\cr
+&&&&\raise0.5\vs\hbox{:9>6;}&&&&\raise-0.5\vs\hbox{:5<8^a~9;}&&&&\raise0.5\vs\hbox{:8<a;$\bigr|$}&&\cr
+&&&\ne&&\se&&\ne&&\se&&\ne&&&&&\cr
+&&\raise0\vs\hbox{:7^9~6;}&&&&S_9&&&&\raise0\vs\hbox{:5<8<a;$\bigr|$}&&&&\cr
+&\ne&&\se&&\ne&&&&&&&&&&&\cr
+S_6&&&&\raise0.5\vs\hbox{:7<9;$\bigr|$}&&&&&&&&&&\cr
+&&&&&&&&&&&&&&&&\cr
+\endmatrix$$
+8 in a cone
+
+9 in a cone
+
+4 in a cone
+
+7 in a cone
+
+5 in a cone
+
+6 in a cone
+
+1 not in a cone
+
+
+
+$C(1)$
+
+%get_cone(inj{1}):
+$$\matrix
+&&&&\raise0\vs\hbox{$\bigl|$:6>3>1;}&&&&\cr
+&&&\ne&&\se&&&&&\cr
+&&\raise0.5\vs\hbox{$\bigl|$:3>1;}&&&&\raise-0.5\vs\hbox{:6>3~1^2;}&&\cr
+&\ne&&\se&&\ne&&\se&&&\cr
+S_1&&&&\raise0\vs\hbox{:3~1^2;}&&&&\raise-1\vs\hbox{:6>3~1^2<5;}\cr
+&\se&&\ne&&\se&&\ne&&&\cr
+&&\raise0.5\vs\hbox{$\bigl|$:2>1;}&&&&\raise-0.5\vs\hbox{:5>2~1^3;}&&\cr
+&&&\se&&\ne&&&&&\cr
+&&&&\raise0\vs\hbox{$\bigl|$:5>2>1;}&&&&\cr
+&&&&&&&&&&\cr
+\endmatrix$$
+\vfil\eject

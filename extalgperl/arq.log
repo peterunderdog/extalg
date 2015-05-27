@@ -1,0 +1,46 @@
+This is TeX, Version 3.14159 (C version 6.1) (format=tex 96.9.26)  26 APR 1999 01:59
+**arq.tex
+(arq.tex
+Hyphenation patterns for english, german, loaded.
+(/usr/lib/teTeX/texmf/tex/amstex/base/amstex.tex
+
+AmS-TeX- Version 2.1
+COPYRIGHT 1985, 1990, 1991 - AMERICAN MATHEMATICAL SOCIETY
+Use of this macro package is not restricted provided
+each use is acknowledged upon publication.
+
+Loading definitions for misc utility macros, page layout, accents/punctuation,
+line and page breaks, figures, comments, math spacing, fractions,
+smash commands, large operator symbols, integrals, operator names,
+multilevel sub/superscripts, matrices, multiline displays,
+continued fractions, compound symbols, various kinds of dots,
+special superscripts, \text, math font commands, \newsymbol,
+bold Greek and bold symbols, Euler fonts, math accents, roots,
+commutative diagrams, poor man's bold, syntax check, ... finished)
+Overfull \hbox (85.4954pt too wide) detected at line 46
+[] [] |
+
+\hbox(53.91675+48.91675)x469.75499
+.\hbox(0.0+0.0)x0.0
+.\glue 1.66663
+.\vbox(53.91675+48.91675)x551.91714
+..\hbox(7.5+2.5)x551.91714
+...\glue(\tabskip) 0.0
+...\hbox(7.5+2.5)x20.58333, glue set 10.29167fil []
+...\glue(\tabskip) 0.0
+..\kern -12.0
+..\glue(\baselineskip) 2.66669
+..\hbox(6.83331+1.49998)x551.91714
+...\glue(\tabskip) 0.0
+...\hbox(6.83331+1.49998)x20.58333, glue set 10.29167fil []
+...\glue(\tabskip) 0.0
+...\hbox(6.83331+1.49998)x10.00002 []
+...\glue(\tabskip) 0.0
+...etc.
+..\glue(\baselineskip) 3.55557
+..etc.
+.\glue 1.66663
+.\rule(*+*)x5.0
+
+[1] )
+Output written on arq.dvi (1 page, 1588 bytes).

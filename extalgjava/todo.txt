@@ -1,0 +1,23 @@
+x3. undo/redo
+
+x8. output the projective modules : do this on server side not in client!
+
+x12. feedback when moving point without attached arrows
+
+x15. serialize quiver as a string to be passed to cgi/servlet:
+
+    todo:
+		QCommutativityRelation
+		   Ca_0,a_1,..,a_n;b_0,..,b_n where a_i, b_i are
+			 paths as above
+	  
+- add checks for special biserial conditions..in particular add relations in
+    draw tool automatically
+
+- feedback when can't add arrow due to violation of special biserial condition
+
+- replace tool radio buttons and 'delete' button with image buttons
+
+- add reverse arrow button
+
+- 

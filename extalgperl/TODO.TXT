@@ -1,0 +1,28 @@
+
+1. identify algebras of infinite representation type by checking for primitive V-sequences in 
+   get_basis (see Skowronski-Waschbusch p. 176)...if primitive V-sequence is found, terminate
+   and tell user
+
+   e.g., ex/1.5
+
+   1>4<3>2<1 is a primitive V-sequence
+
+2. find a way to get minimal relations...find_equiv_paths already finds commutativity relations,
+   but these sometimes need to be reduced...e.g., ex/1.3
+ 
+   b_0 =~ b_7 b_5 b_4 
+   b_0 =~ b_8 b_6 b_4 
+   b_1 =~ b_5 b_4 
+   b_2 =~ b_6 b_4 
+   b_3 =~ b_7 b_5 
+   b_3 =~ b_8 b_6 
+	 
+   b_7 b_5 b_4 =~ b_8 b_6 b_4 is trivial since b_7 b_5 =~ b_8 b_6 by the last two
+   statements
+
+   need to find zero relations...a path is a zero relation iff it is not equivalent to a 
+   basis sequence
+
+3. 
+      
+       

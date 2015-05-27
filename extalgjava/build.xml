@@ -1,0 +1,33 @@
+<!-- build.xml
+-->
+
+<project name="extalg" default="all" basedir="L:/extalg/extalgjava">
+  <target name="init">
+    <tstamp/>
+    <property name="collections" value="L:\JavaSource\1.1collections\lib\collections.jar" />
+    <property name="deploy" value="${basedir}/deploy" />
+  </target>
+
+  <target name="prepare" depends="init">
+    <mkdir dir="${deploy}" />
+  </target>
+
+  <target name="applet" depends="prepare">
+    <javac srcdir="${basedir}" destdir="${deploy}" executable="H:\java1.1.8\bin\javac.exe"
+         debug="on" deprecation="on" includes="qtools/**,quiver/**,*.java">
+			<classpath path="${deploy}"/>
+	  </javac>
+  </target>
+
+  <target name="jar" depends="applet">
+    <jar basedir="${deploy}" destfile="..\SpecialBiserial.jar">
+      <include name="qtools/**"/>
+      <include name="quiver/**"/>
+      <include name="*.class"/>
+	  </jar>
+  </target>
+
+  <target name="all" depends="applet, jar" />
+	
+</project>
+

@@ -1,0 +1,48 @@
+%                                                   6>4>2                                                
+%             2>1               3             2<4             6>4               5             6<7        
+%       1           3>1<2           2<4>3               4           5>4<6           6<7>5               7
+%             3>1               2             4>3             5>4               6             7>5        
+%                                                   5>4>3                                                
+\input amstex
+\newdimen\vk
+\newdimen\hk
+\newdimen\vs
+\newdimen\hs
+\vs=7pt
+\hs=5pt
+\vk=0pt
+\hk=0pt
+\catcode`<=\active
+\catcode`>=\active
+\catcode`^=\active
+\catcode`~=\active
+\catcode`:=\active
+\catcode`!=\active
+\catcode`;=\active
+\def\put#1{\offinterlineskip\vbox to0pt{\kern-\vk
+	   \hbox to 0pt{\kern\hk$\scriptstyle #1$\hss}\vss}}
+\def>#1{\advance\vk by -\vs\put #1}
+\def<#1{\advance\vk by \vs\put#1}
+\def^#1{\advance\hk by\hs\advance\vk by\vs\put #1\advance\hk by \hs}
+\def~#1{\advance\hk by\hs\advance\vk by-\vs\put #1\advance\hk by \hs}
+\def:#1{\hskip3pt\hk=0pt\vk=0pt\put#1}
+\def;{\advance\hk by 8pt\hskip\hk}
+\def!#1{\hskip3pt\hk=\hs\vk=0pt\put #1\hk=0pt}
+\def\gldim{\operatorname{gldim\,}}
+\def\ne{\hidewidth\mathop{\nearrow}\hidewidth}
+\def\se{\hidewidth\mathop{\searrow}\hidewidth}
+\def\dn{\hidewidth\mathop{\downarrow}\hidewidth}
+\def\up{\hidewidth\mathop{\uparrow}\hidewidth}
+\nopagenumbers
+$$\matrix
+&&&&&&&&&&&&\raise0.5\vs\hbox{:6>4>2;}&&&&&&&&&&&&&&\cr
+&&&&&&&&&&&\ne&&\se&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&\cr
+&&\raise0.5\vs\hbox{:2>1;}&&&&S_3&&&&\raise0.5\vs\hbox{:2<4;}&&&&\raise0.5\vs\hbox{:6>4;}&&&&S_5&&&&\raise0.5\vs\hbox{:6<7;}&&&&\cr
+&\ne&&\se&&\ne&&\se&&\ne&&\se&&\ne&&\se&&\ne&&\se&&\ne&&\se&&&&&\cr
+S_1&&&&\raise0.5\vs\hbox{:3~1<2;}&&&&\raise0.5\vs\hbox{:2^4>3;}&&&&S_4&&&&\raise0.5\vs\hbox{:5~4<6;}&&&&\raise0.5\vs\hbox{:6^7>5;}&&&&S_7&&\cr
+&\se&&\ne&&\se&&\ne&&\se&&\ne&&\se&&\ne&&\se&&\ne&&\se&&\ne&&&\cr
+&&\raise0.5\vs\hbox{:3>1;}&&&&S_2&&&&\raise0.5\vs\hbox{:4>3;}&&&&\raise0.5\vs\hbox{:5>4;}&&&&S_6&&&&\raise0.5\vs\hbox{:7>5;}&&&&\cr
+&&&&&&&&&&&\se&&\ne&&&&&&&&&&&&&&&&&&&&&&&\cr
+&&&&&&&&&&&&\raise0.5\vs\hbox{:5>4>3;}\cr
+\endmatrix$$
+\vfil\eject\end

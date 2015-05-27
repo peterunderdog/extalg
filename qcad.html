@@ -1,0 +1,230 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title>quiverCAD User's Guide</title>
+</head>
+
+<body>
+<center>
+<table width=90%>
+<tr>
+      <td> <a href="index.html"><font size=-1><b>Back to Ext-algebra page</b></font></A></td>
+      <td align=center><a href="examples.html"><font size=-1><b>Examples</b></font></A></td>
+      <td align=center><a href="javadoc/"><font size=-1><b>View the <i><font color=red>q</font>ui<font color=red>v</font>erC<font color=red>A</font>D</i> 
+        Java API</b></font></A></td>
+      <td align=right><a href="extalgperl/extalg.cgi"><font size=-1><b>Compute an Ext-algebra</b></font></A></td>
+</table>
+</center>
+<center><img src="qcad.gif"></center>
+<h1><i><font color=red>q</font>ui<font color=red>v</font>erC<font color=red>A</font>D</i> User's Guide</h1>
+
+
+
+<p>The <i><font color=red>q</font>ui<font color=red>v</font>erC<font color=red>A</font>D</i> applet is an applet for drawing the quiver of an algebra. For the
+purposes of the Ext-algebra web application, this algebra is assumed to be special biserial,
+so the applet has some special features specific to biserial algebras. For example, it
+allows only at most two arrows starting or ending at a vertex. The code for the applet
+has been written to allow it to be adapted to more general situations however.
+
+<p>The <i><font color=red>q</font>ui<font color=red>v</font>erC<font color=red>A</font>D</i> user interface consists of a drawing surface with gray grid lines,
+and a control panel
+which controls the mode the applet is operating in, a 'Delete' button, and an 'OK' button,
+for submitting the quiver for computation.
+
+<p><i><font color=red>q</font>ui<font color=red>v</font>erC<font color=red>A</font>D</I> operates in three modes
+<ul>
+	<li>Draw mode (for drawing points and arrows)
+	<li>Move mode (for moving points and arrows around after you draw them)
+	<li>Relations mode (for defining relations)
+</ul>
+Each of the modes is described below.
+
+<h2>Draw mode</h2>
+<p>To enter Draw mode, click on the 'Draw' radio button.
+In Draw mode, you can use the mouse to insert vertices and arrows into your quiver. In
+this section, the various methods of creating vertices and arrows are discussed.
+
+<h3>Vertices</h3>
+<p>
+To insert a vertex, click the mouse. The vertex will be inserted (roughly) at the point
+where the mouse was clicked. The applet uses the concept of 'snapping' to
+grid lines used in many CAD software packages, so that if the point where the mouse
+is clicked is close enough (within a few pixels) of a grid line, the point will
+be placed on a grid line. This feature is provided so that the resulting quiver
+looks neater, with vertices and arrows that line up with each other.
+
+<h3>Selecting items</h3>
+<p>After you insert a vertex, you will notice that it appears in red. This means that
+it is <i>selected</i>. If you click on a selected vertex, its color changes to black,
+indicating that it is not selected. In <i><font color=red>q</font>ui<font color=red>v</font>erC<font color=red>A</font>D</I>, many operations require items
+to be selected first. In general, this is done by clicking on (or near) the item. For
+example, to delete a vertex, select it by clicking on it, then click on the 'Delete'
+button.
+<center>
+<img src="images/fig1.jpg"><br>
+<font size=-1><b>Fig. 1: The arrow from 2 to 3, and vertex 3 are selected</b></font>
+</center>
+
+<h3>Arrows</h3>
+<p>There are two ways of inserting arrows. In either case, the vertex where the
+arrow originates must be selected first, by clicking on it. To draw the arrow,
+click on the origin, then drag the mouse. You will see a drag line drawn from the
+origin of the arrow to the mouse pointer. If you drag the mouse near another vertex
+then release it, an arrow will be drawn to that vertex. If you release the mouse at
+a point which is not near a vertex, a new vertex will be created and an arrow will be
+drawn terminating at the new vertex.
+
+<p>For the purpose of this web application, the algebras are assumed to be special
+biserial, so it is possible only to draw at most two arrows originating or terminating
+at any vertex.
+
+<p>Multiple arrows between the same two points can be drawn by drawing over an existing arrow.
+
+<center>
+<img src="images/multiarrows.jpg"><br>
+<font size=-1><b>Fig. 2: Multiple arrows</b></font>
+</center>
+
+
+<h3>More on selecting, deleting</h3>
+<p>Again, after an arrow is created, it appears in red, indicating that it is selected.
+Newly inserted items are automatically selected to facilitate undoing the insertion
+by clicking
+on the 'Delete' button. To delete more than one item at a time, you may continue selecting
+items (any combination of vertices, arrows) by clicking on them. To remove a selected item
+from the selection, click on it. When the 'Delete' button is clicked, all selected items
+are removed, along with any items that depend on the ones which were removed. For example,
+when a vertex is removed, all arrows originating or terminating at the vertex are also
+removed, whether or not they were selected.
+
+<h3>Labels on vertices</h3>
+<p>The labels on the vertices may be edited by selecting the vertex (i.e., clicking
+on it), then typing the new label on the keyboard. Labels are single characters
+consisting of the digits 0-9, and the upper and lower case letters and must be unique.
+This implies a (current)
+limitation of at most 62 vertices in a quiver. By default, vertices are labeled
+starting with the digits 1-9, continuing with lower case, then upper case letters, and
+finally, the digit 0. 
+
+<h2>Move mode</h2>
+
+<p>The purpose of Move mode is to allow vertices to be rearranged to improve the
+appearance of the quiver. In Move mode, only one vertex at a time may be selected.
+The selected vertex can be dragged with the mouse to a different location.
+While the mouse is being dragged, arrows
+attached to the point being moved are dragged along. When the mouse is released, the
+point is moved (using the same principles of snapping to grid lines described above),
+and the arrows are attached to the vertex are moved accordingly.
+
+<center>
+<img src="images/fig2.jpg"><br>
+<font size=-1><b>Fig. 3: Moving vertex 'a'</b></font>
+</center>
+
+<h2>Relations mode</h2>
+
+<p>Relations mode allows relations to be defined. Zero relations (relations consisting
+of a path), and commutativity relations (relations involving distinct paths starting
+and ending at the same vertex) may be defined.
+
+<h3>Defining zero relations</h3>
+<p>A zero relation is defined by specifying a path in the quiver. The path is specified
+by clicking on the arrow at the start of the path and holding down the mouse button. To
+add arrows to the path, drag the mouse over the arrows in order of their appearance in
+the path. Dragging the mouse over an arrow which cannot be appended to the current path
+has no effect. While the mouse is being dragged, the current path appears as a dotted
+curve drawn from the start vertex of the path to the end vertex of the path. The curve
+is tangent to the start and end arrows of the path at the respective endpoints. When
+the mouse is released, the curve indicates the path defining the zero relation.
+
+<center>
+<table cellpadding=5 cellspacing=5>
+<tr><td align=center colspan=2><B>Defining a zero relation</b></td></tr>
+<tr>
+<td align=center valign=center><img src="images/rel1.jpg"><br>
+	<b><font size=-1>Step 1, select arrow</b></font></td>
+<td align=center valign=center><img src="images/rel2.jpg"><br>
+	<b><font size=-1>Step 2, drag over next arrow</b></font></td>
+</tr>
+<tr>
+<td align=center valign=center><img src="images/rel3.jpg"><br>
+	<b><font size=-1>Step 3, drag over next arrow</b></font></td>
+<td align=center valign=center><img src="images/rel4.jpg"><br>
+	<b><font size=-1>Step 4, release mouse</b></font></td>
+</tr></table>
+</center>
+
+<h3>Defining commutativity relations</h3>
+
+<p>To define a commutativity relation, first define the two paths involved in the
+commutativity relation temporarily as zero relations. Next, select the two zero
+relations by clicking near them. Type the equals (=) key on the keyboard while the
+two relations are selected. The relations will change color, and equal signs will appear
+next to each path in the relation, indicating that the paths are equal modulo the ideal
+generated by the relations.
+
+<center>
+<table cellpadding=5 cellspacing=5>
+<tr><td align=center colspan=2><B>Defining a commutativity relation</b></td></tr>
+<tr>
+<td align=center valign=center><img src="images/commrel1.jpg"><br>
+	<b><font size=-1>Step 1, select two zero relations</b></font></td>
+<td align=center valign=center><img src="images/commrel2.jpg"><br>
+	<b><font size=-1>Step 2, type the '=' key</b></font></td>
+</tr>
+</table>
+</center>
+
+<h2>Undo/redo</h2>
+
+<p>
+Undo/redo buttons are provided on the control panel. You can undo any action performed
+on the quiver including insertion of points, arrows and relations, and moving of points.
+The redo button reverses the effect of the undo button, so that you can move forward and
+backward in the sequence of actions performed on the quiver. There is no limit to the
+number of levels of undo, that is, you may undo all the way back to the beginning of the
+edit session. 
+
+<h2>Current limitations</h2>
+<ul>
+	<li>Number of vertices limited to at most 62 due to labeling restrictions
+	<li>No way to specify relations in cycle of length greater than length of the cycle.
+	<li>No way to specify Loewy length.
+	<li>Loops not allowed.
+</ul>
+
+<h2>Planned enhancements</h2>
+
+<p>The following fixes/enhancements are planned. Requests for other changes are 
+  <a href="mailto:pbrown@microbio.umass.edu">welcome</A>. 
+<h3>Real Soon Now</h3>
+<ul>
+	<li>Maintain special biserial conditions during creation of the quiver by
+			automatically inserting relations and checking the conditions before
+			allowing relations to be deleted.
+</ul>
+<h3>Planning stages</h3>
+<ul>
+	<li>Improved move tool (move more than one point, move whole quiver etc.)
+	<li>Combine move/select tool to allow multiple selection with rectangle,
+			and allow deletion, moving of multiple items
+</ul>
+
+<h2>Acknowledgements</h2>
+<ul>
+	<li>Developed using the Emacs JDE!</i>
+</ul>
+<a href="http://sunsite.auc.dk/jde"><img src="jdelogo.gif" border=0></a>
+<hr>
+<center>
+<table width=90%>
+<tr>
+      <td> <a href="index.html"><font size=-1><b>Back to Ext-algebra page</b></font></A></td>
+      <td align=center><a href="examples.html"><font size=-1><b>Examples</b></font></A></td>
+      <td align=center><a href="javadoc/"><font size=-1><b>View the <i><font color=red>q</font>ui<font color=red>v</font>erC<font color=red>A</font>D</i> 
+        Java API</b></font></A></td>
+      <td align=right><a href="extalgperl/extalg.cgi"><font size=-1><b>Compute an Ext-algebra</b></font></A></td>
+</table>
+</center>
+<hr>
+<p> <i>(c) 2003 <a href="http://www-unix.oit.umass.edu/~brownp/">Peter Brown</a> (<a href="mailto:pbrown@microbio.umass.edu">pbrown@microbio.umass.edu</a>)</i> 
+</body> </html>
