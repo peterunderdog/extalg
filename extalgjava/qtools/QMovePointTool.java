@@ -8,7 +8,7 @@ import java.awt.event.*;
 import java.awt.Rectangle;
 import java.awt.Point;
 import java.awt.Color;
-import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.util.Vector;
 import java.util.Enumeration;
 import quiver.*;
@@ -70,7 +70,7 @@ public class QMovePointTool extends QTool
   /**
    * draw lines from point to points in incidentPts vector
    */
-  protected void drawLinesToPoints(Point p, Graphics g)
+  protected void drawLinesToPoints(Point p, Graphics2D g)
   {
     Enumeration e=incidentPts.elements();
     while (e.hasMoreElements())
@@ -87,7 +87,7 @@ public class QMovePointTool extends QTool
   /**
    * draw drag
    */
-  public void drawDrag(Graphics g, Color background)
+  public void drawDrag(Graphics2D g, Color background)
   {
     g.setColor(Color.black);
     g.setXORMode(background);

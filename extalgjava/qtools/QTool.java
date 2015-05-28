@@ -6,7 +6,7 @@
 package qtools;
 import java.awt.event.*;
 import java.awt.Rectangle;
-import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.Color;
 import java.awt.Point;
 import java.util.Vector;
@@ -36,7 +36,7 @@ public abstract class QTool implements MouseListener, MouseMotionListener, KeyLi
     panel.repaint();
   }
 
-  public void drawDrag(Graphics g, Color background)
+  public void drawDrag(Graphics2D g, Color background)
   {
   }
   

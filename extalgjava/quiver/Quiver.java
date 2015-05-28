@@ -6,7 +6,7 @@
 package quiver;
 import java.util.Vector;
 import java.util.Enumeration;
-import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.Point;
 import java.util.Hashtable;
 import java.lang.Integer;
@@ -519,10 +519,10 @@ public class Quiver
    */
   public void unselectAll()
   {
-    Enumeration enum=items.elements();
-    while (enum.hasMoreElements())
+    Enumeration enumer=items.elements();
+    while (enumer.hasMoreElements())
     {
-      ((QItem) enum.nextElement()).unselect();
+      ((QItem) enumer.nextElement()).unselect();
     }
   }
 
@@ -860,12 +860,12 @@ public class Quiver
    * draws the items in the quiver by calling the draw method for each item
    * @param g a graphics context onto which the quiver is drawn
    */
-  public void draw(Graphics g)
+  public void draw(Graphics2D g)
   {
-    Enumeration enum=items.elements();
-    while (enum.hasMoreElements())
+    Enumeration enumer=items.elements();
+    while (enumer.hasMoreElements())
     {
-      ((QItem) enum.nextElement()).draw(g);
+      ((QItem) enumer.nextElement()).draw(g);
     }
   }
 
@@ -1062,10 +1062,10 @@ public class Quiver
     int maxx=Integer.MIN_VALUE;
     int maxy=Integer.MIN_VALUE;
     
-    Enumeration enum=items.elements();
-    while (enum.hasMoreElements())
+    Enumeration enumer=items.elements();
+    while (enumer.hasMoreElements())
     {
-      QItem item=(QItem) enum.nextElement();
+      QItem item=(QItem) enumer.nextElement();
       if (item instanceof QPoint)
       {
         int x=((QPoint) item).X();
@@ -1089,10 +1089,10 @@ public class Quiver
    */
   public void translate(int dx, int dy)
   {
-    Enumeration enum=items.elements();
-    while (enum.hasMoreElements())
+    Enumeration enumer=items.elements();
+    while (enumer.hasMoreElements())
     {
-      QItem item=(QItem) enum.nextElement();
+      QItem item=(QItem) enumer.nextElement();
       if (item instanceof QPoint)
       {
         ((QPoint) item).translate(dx, dy);

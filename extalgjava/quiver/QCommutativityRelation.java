@@ -3,7 +3,7 @@
 //Copyright:   Copyright (c) pb
 //Author:      pb
 package quiver;
-import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.Point;
 import java.util.Enumeration;
 import java.util.Vector;
@@ -57,7 +57,7 @@ public class QCommutativityRelation extends QItem
    * determined by the start and end arrows of the path
    * @param g a graphics context onto which the item will be drawn
    */
-  protected void drawItem(Graphics g)
+  protected void drawItem(Graphics2D g)
   {
     Enumeration e=paths.elements();
     while (e.hasMoreElements())

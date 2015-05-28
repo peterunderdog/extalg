@@ -187,7 +187,7 @@ Method in class quiver.<A HREF="quiver/QPath.html">QPath</A>
 <A NAME="_D_"><!-- --></A><H2>
 <B>D</B></H2>
 <DL>
-<DT><A HREF="qtools/DrawQuiverPanel.html#dbredraw(java.awt.Graphics)"><B>dbredraw(Graphics)</B></A> - 
+<DT><A HREF="qtools/DrawQuiverPanel.html#dbredraw(java.awt.Graphics2D)"><B>dbredraw(Graphics2D)</B></A> - 
 Method in class qtools.<A HREF="qtools/DrawQuiverPanel.html">DrawQuiverPanel</A>
 <DD>repaint using double buffer
 <DT><A HREF="quiver/Quiver.html#decode(java.lang.String)"><B>decode(String)</B></A> - 
@@ -267,16 +267,16 @@ Method in class quiver.<A HREF="quiver/Quiver.html">Quiver</A>
 <DT><A HREF="quiver/QPath.html#drawCurve(java.awt.Graphics2D, java.lang.String)"><B>drawCurve(Graphics2D, String)</B></A> - 
 Method in class quiver.<A HREF="quiver/QPath.html">QPath</A>
 <DD>draws a curve, with optional label, representing the path
-<DT><A HREF="qtools/QTool.html#drawDrag(java.awt.Graphics, java.awt.Color)"><B>drawDrag(Graphics, Color)</B></A> - 
+<DT><A HREF="qtools/QTool.html#drawDrag(java.awt.Graphics2D, java.awt.Color)"><B>drawDrag(Graphics2D, Color)</B></A> - 
 Method in class qtools.<A HREF="qtools/QTool.html">QTool</A>
 <DD>&nbsp;
-<DT><A HREF="qtools/QDrawTool.html#drawDrag(java.awt.Graphics, java.awt.Color)"><B>drawDrag(Graphics, Color)</B></A> - 
+<DT><A HREF="qtools/QDrawTool.html#drawDrag(java.awt.Graphics2D, java.awt.Color)"><B>drawDrag(Graphics2D, Color)</B></A> - 
 Method in class qtools.<A HREF="qtools/QDrawTool.html">QDrawTool</A>
 <DD>draw drag
-<DT><A HREF="qtools/QMovePointTool.html#drawDrag(java.awt.Graphics, java.awt.Color)"><B>drawDrag(Graphics, Color)</B></A> - 
+<DT><A HREF="qtools/QMovePointTool.html#drawDrag(java.awt.Graphics2D, java.awt.Color)"><B>drawDrag(Graphics2D, Color)</B></A> - 
 Method in class qtools.<A HREF="qtools/QMovePointTool.html">QMovePointTool</A>
 <DD>draw drag
-<DT><A HREF="qtools/QRelationsTool.html#drawDrag(java.awt.Graphics, java.awt.Color)"><B>drawDrag(Graphics, Color)</B></A> - 
+<DT><A HREF="qtools/QRelationsTool.html#drawDrag(java.awt.Graphics2D, java.awt.Color)"><B>drawDrag(Graphics2D, Color)</B></A> - 
 Method in class qtools.<A HREF="qtools/QRelationsTool.html">QRelationsTool</A>
 <DD>draw drag
 <DT><A HREF="qtools/DrawQuiverPanel.html#drawGrid(java.awt.Graphics2D)"><B>drawGrid(Graphics2D)</B></A> - 
@@ -299,7 +299,7 @@ Method in class quiver.<A HREF="quiver/QZeroRelation.html">QZeroRelation</A>
 <DT><A HREF="quiver/QPoint.html#drawItem(java.awt.Graphics2D)"><B>drawItem(Graphics2D)</B></A> - 
 Method in class quiver.<A HREF="quiver/QPoint.html">QPoint</A>
 <DD>draw a point
-<DT><A HREF="qtools/QMovePointTool.html#drawLinesToPoints(java.awt.Point, java.awt.Graphics)"><B>drawLinesToPoints(Point, Graphics)</B></A> - 
+<DT><A HREF="qtools/QMovePointTool.html#drawLinesToPoints(java.awt.Point, java.awt.Graphics2D)"><B>drawLinesToPoints(Point, Graphics2D)</B></A> - 
 Method in class qtools.<A HREF="qtools/QMovePointTool.html">QMovePointTool</A>
 <DD>draw lines from point to points in incidentPts vector
 <DT><A HREF="qtools/DrawQuiverControls.html"><B>DrawQuiverControls</B></A> - class qtools.<A HREF="qtools/DrawQuiverControls.html">DrawQuiverControls</A>.<DD>&nbsp;<DT><A HREF="qtools/DrawQuiverControls.html#DrawQuiverControls(qtools.DrawQuiverPanel)"><B>DrawQuiverControls(DrawQuiverPanel)</B></A> - 
@@ -644,10 +644,10 @@ Variable in class quiver.<A HREF="quiver/QUndoRedoMovedPoint.html">QUndoRedoMove
 <DT><A HREF="quiver/QUndoRedoMovedPoint.html#p1"><B>p1</B></A> - 
 Variable in class quiver.<A HREF="quiver/QUndoRedoMovedPoint.html">QUndoRedoMovedPoint</A>
 <DD>&nbsp;
-<DT><A HREF="qtools/DrawQuiverControls.html#paint(java.awt.Graphics)"><B>paint(Graphics)</B></A> - 
+<DT><A HREF="qtools/DrawQuiverControls.html#paint(java.awt.Graphics2D)"><B>paint(Graphics2D)</B></A> - 
 Method in class qtools.<A HREF="qtools/DrawQuiverControls.html">DrawQuiverControls</A>
 <DD>&nbsp;
-<DT><A HREF="qtools/DrawQuiverPanel.html#paint(java.awt.Graphics)"><B>paint(Graphics)</B></A> - 
+<DT><A HREF="qtools/DrawQuiverPanel.html#paint(java.awt.Graphics2D)"><B>paint(Graphics2D)</B></A> - 
 Method in class qtools.<A HREF="qtools/DrawQuiverPanel.html">DrawQuiverPanel</A>
 <DD>&nbsp;
 <DT><A HREF="qtools/QTool.html#panel"><B>panel</B></A> - 
@@ -1005,7 +1005,7 @@ Method in class quiver.<A HREF="quiver/QItem.html">QItem</A>
 <DT><A HREF="quiver/Quiver.html#unselectAll()"><B>unselectAll()</B></A> - 
 Method in class quiver.<A HREF="quiver/Quiver.html">Quiver</A>
 <DD>unselect all items in the quiver
-<DT><A HREF="qtools/DrawQuiverPanel.html#update(java.awt.Graphics)"><B>update(Graphics)</B></A> - 
+<DT><A HREF="qtools/DrawQuiverPanel.html#update(java.awt.Graphics2D)"><B>update(Graphics2D)</B></A> - 
 Method in class qtools.<A HREF="qtools/DrawQuiverPanel.html">DrawQuiverPanel</A>
 <DD>update
 <DT><A HREF="quiver/QArrow.html#ux()"><B>ux()</B></A> - 

@@ -9,7 +9,7 @@ import java.awt.geom.CubicCurve2D;
 import java.awt.geom.Point2D;
 import java.awt.Stroke;
 import java.awt.geom.Rectangle2D;
-import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.Point;
 
 /** paths in a quiver */
@@ -223,7 +223,7 @@ public class QPath
    * @param g a graphics context onto which the curve is rendered
    * @label a label (null if you don't want one)
    */
-  public void drawCurve(Graphics g, String label)
+  public void drawCurve(Graphics2D g, String label)
   {
     if (path.size()>0)
     {

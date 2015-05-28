@@ -45,7 +45,7 @@ public class DrawQuiverControls extends Panel implements ActionListener, ItemLis
     btn.addActionListener(this);
   }
 
-  public void paint(Graphics g) {
+  public void paint(Graphics2D g) {
     Rectangle r = getBounds();
     g.setColor(Color.lightGray);
     g.draw3DRect(0, 0, r.width, r.height, false);

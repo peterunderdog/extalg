@@ -5,7 +5,7 @@
 
 package qtools;
 import java.awt.event.*;
-import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.Color;
 import java.awt.Stroke;
 import java.util.Vector;
@@ -92,7 +92,7 @@ public class QRelationsTool extends QTool
   /**
    * draw drag
    */
-  public void drawDrag(Graphics g, Color background)
+  public void drawDrag(Graphics2D g, Color background)
   {
     panel.dbredraw(g);
     if (currPath!=null)

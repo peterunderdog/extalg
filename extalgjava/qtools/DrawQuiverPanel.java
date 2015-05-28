@@ -110,7 +110,7 @@ public class DrawQuiverPanel extends Panel {
   /**
    * draw grid within rectangle
    */
-  protected void drawGrid(Graphics g2)
+  protected void drawGrid(Graphics2D g2)
   {
     g2.setPaintMode();
     g2.setColor(Color.lightGray);
@@ -136,12 +136,12 @@ public class DrawQuiverPanel extends Panel {
   /**
    * repaint using double buffer
    */
-  public void dbredraw(Graphics g)
+  public void dbredraw(Graphics2D g)
   {
     getSize(size);
     if (imgbuf==null || imgbuf.getWidth(this) != size.width || imgbuf.getHeight(this)!=size.height)
       imgbuf = createImage(size.width, size.height);
-    Graphics gr=imgbuf.getGraphics();
+    Graphics2D gr = (Graphics2D) imgbuf.getGraphics();
     gr.setColor(getBackground());
     gr.fillRect(0, 0, size.width, size.height);
     paint(gr);
@@ -151,7 +151,7 @@ public class DrawQuiverPanel extends Panel {
   /**
    * update
    */
-  public void update(Graphics g)
+  public void update(Graphics2D g)
   {
     if (dragging)
       currentTool.drawDrag(g, getBackground());
@@ -159,7 +159,7 @@ public class DrawQuiverPanel extends Panel {
       dbredraw(g);
   }
 
-  public void paint(Graphics g)
+  public void paint(Graphics2D g)
   {
     drawGrid(g);
     quiver.draw(g);

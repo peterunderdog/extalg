@@ -3,7 +3,7 @@
 //Copyright:   Copyright (c) pb
 //Author:      pb
 package quiver;
-import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.Point;
 import java.awt.Color;
 
@@ -62,7 +62,7 @@ public class QZeroRelation extends QItem
    * draw the item
    * @param g a graphics context onto which the item will be drawn
    */
-  protected void drawItem(Graphics g)
+  protected void drawItem(Graphics2D g)
   {
     path.drawCurve(g, null);
   }

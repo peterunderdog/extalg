@@ -3,7 +3,7 @@
 //Copyright:   Copyright (c) pb
 //Author:      pb
 package quiver;
-import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.Rectangle;
 import java.awt.Point;
 import java.awt.FontMetrics;
@@ -121,7 +121,7 @@ public class QPoint extends QItem
    * @param g a graphics context from which font metrics are obtained
    * @return the rectangle containing the label character
    */
-  protected Rectangle labelRectangle(Graphics g)
+  protected Rectangle labelRectangle(Graphics2D g)
   {
     FontMetrics fm=g.getFontMetrics();
     int width=ptSize+2+fm.charWidth(label);
@@ -139,7 +139,7 @@ public class QPoint extends QItem
    * @param y y coordinate of point being tested
    * @return the offest amount
    */
-  public int labelOffset(Graphics g, int x, int y)
+  public int labelOffset(Graphics2D g, int x, int y)
   {
     Rectangle rc=labelRectangle(g);
     return rc.contains(x, y) ? rc.width : 0;
@@ -149,7 +149,7 @@ public class QPoint extends QItem
    * draw a point
    * @param g graphics context onto which point will be drawn
    */
-  protected void drawItem(Graphics g)
+  protected void drawItem(Graphics2D g)
   {
     g.fillOval(X()-ptSize, Y()-ptSize, 2*ptSize+1, 2*ptSize+1);
     // draw label

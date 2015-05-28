@@ -1,10 +1,9 @@
 <!-- build.xml
 -->
 
-<project name="extalg" default="all" basedir="L:/extalg/extalgjava">
+<project name="extalg" default="all" basedir=".">
   <target name="init">
     <tstamp/>
-    <property name="collections" value="L:\JavaSource\1.1collections\lib\collections.jar" />
     <property name="deploy" value="${basedir}/deploy" />
   </target>
 
@@ -13,7 +12,7 @@
   </target>
 
   <target name="applet" depends="prepare">
-    <javac srcdir="${basedir}" destdir="${deploy}" executable="H:\java1.1.8\bin\javac.exe"
+    <javac srcdir="${basedir}" destdir="${deploy}" executable="javac"
          debug="on" deprecation="on" includes="qtools/**,quiver/**,*.java">
 			<classpath path="${deploy}"/>
 	  </javac>

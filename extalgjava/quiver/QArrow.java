@@ -3,7 +3,7 @@
 //Copyright:   Copyright (c) pb
 //Author:      pb
 package quiver;
-import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.Rectangle;
 import java.awt.Point;
 import java.awt.Polygon;
@@ -186,7 +186,7 @@ public class QArrow extends QItem
    * vertices
    * @param g a graphics context onto which the item will be rendered
    */
-  protected void drawItem(Graphics g)
+  protected void drawItem(Graphics2D g)
   {
     // find endpoint...
     final int arrHeadLength=8;

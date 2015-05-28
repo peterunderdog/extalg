@@ -112,7 +112,7 @@ class DrawQuiverPanel extends Panel implements MouseListener, MouseMotionListene
   public void mouseClicked(MouseEvent e) {
   }
 
-  public void paint(Graphics g) {
+  public void paint(Graphics2D g) {
     /*
     int np = lines.size();
 
@@ -182,7 +182,7 @@ class DrawControls extends Panel implements ItemListener {
     add(shapes);
   }
 
-  public void paint(Graphics g) {
+  public void paint(Graphics2D g) {
     Rectangle r = getBounds();
     g.setColor(Color.lightGray);
     g.draw3DRect(0, 0, r.width, r.height, false);
@@ -231,7 +231,7 @@ abstract class QItem
   /**
    * draw a point
    */
-  public void draw(Graphics g)
+  public void draw(Graphics2D g)
   {
     if (selected_)
     {
@@ -247,7 +247,7 @@ abstract class QItem
   /**
    * draw item
    */
-  protected abstract void drawItem(Graphics g);
+  protected abstract void drawItem(Graphics2D g);
 
   /**
    * distance from point
@@ -279,7 +279,7 @@ class QPoint extends QItem
   /**
    * draw a point
    */
-  protected void drawItem(Graphics g)
+  protected void drawItem(Graphics2D g)
   {
     g.fillOval(x_-ptSize_, y_-ptSize_, 2*ptSize_, 2*ptSize_);
   }
@@ -299,7 +299,7 @@ class QArrow extends QItem
   /**
    * draw an arrow
    */
-  protected void drawItem(Graphics g)
+  protected void drawItem(Graphics2D g)
   {
     g.drawLine(start_.x_, start_.y_, end_.x_, end_.y_);
   }
@@ -332,10 +332,10 @@ class Quiver
   {
     QItem item=null;
     int mindist=-1;
-    Enumeration enum=vec.elements();
-    while (enum.hasMoreElements())
+    Enumeration enumer=vec.elements();
+    while (enumer.hasMoreElements())
     {
-      QItem nextItem=(QItem) enum.nextElement();
+      QItem nextItem=(QItem) enumer.nextElement();
       int dist=nextItem.distance(x,y);
       if (mindist==-1 || dist < mindist)
       {
@@ -401,10 +401,10 @@ class Quiver
    */
   public void unselectAll(Vector v)
   {
-    Enumeration enum=v.elements();
-    while (enum.hasMoreElements())
+    Enumeration enumer=v.elements();
+    while (enumer.hasMoreElements())
     {
-      ((QItem) enum.nextElement()).unselect();
+      ((QItem) enumer.nextElement()).unselect();
     }
   }
 
@@ -438,17 +438,17 @@ class Quiver
   /**
    * draw the quiver
    */
-  public void draw(Graphics g)
+  public void draw(Graphics2D g)
   {
-    Enumeration enum=points_.elements();
-    while (enum.hasMoreElements())
+    Enumeration enumer=points_.elements();
+    while (enumer.hasMoreElements())
     {
-      ((QPoint) enum.nextElement()).draw(g);
+      ((QPoint) enumer.nextElement()).draw(g);
     }
-    enum=arrows_.elements();
-    while (enum.hasMoreElements())
+    enumer=arrows_.elements();
+    while (enumer.hasMoreElements())
     {
-      ((QArrow) enum.nextElement()).draw(g);
+      ((QArrow) enumer.nextElement()).draw(g);
     }
   }
 }

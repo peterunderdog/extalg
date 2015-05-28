@@ -6,7 +6,7 @@
 package qtools;
 import java.awt.event.*;
 import java.awt.Rectangle;
-import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.Color;
 import java.util.Vector;
 import java.awt.Point;
@@ -65,7 +65,7 @@ public class QDrawTool extends QTool
   /**
    * draw drag
    */
-  public void drawDrag(Graphics g, Color background)
+  public void drawDrag(Graphics2D g, Color background)
   {
     g.setColor(Color.black);
     g.setXORMode(background);

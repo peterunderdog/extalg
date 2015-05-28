@@ -6,7 +6,7 @@
 package quiver;
 import java.util.Vector;
 import java.util.Enumeration;
-import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.Point;
 import java.awt.Color;
 import java.awt.BasicStroke;
@@ -91,7 +91,7 @@ public abstract class QItem
    * This calls the drawItem method in derived classes to render the item
    * @param g a graphics context onto which the item will be rendered
    */
-  public void draw(Graphics g)
+  public void draw(Graphics2D g)
   {
     g.setPaintMode();
     g.setColor(itemColor(selected));
@@ -112,7 +112,7 @@ public abstract class QItem
    * draws the item
    * @param g a graphics context onto which the item will be rendered
    */
-  protected abstract void drawItem(Graphics g);
+  protected abstract void drawItem(Graphics2D g);
 
   /**
    * Calculates the distance of the item from a coordinate (e.g., a mouse click)
